@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
-import Membro from './components/Membro';
 
 class App extends Component{
 
+    constructor(props){
+        super(props);
+        this.state = {
+            status: 1
+        };
+    }
     render(){
         return(
             <div>
-                 <Membro nome="Visitante"/>
+                 {this.state.status === 1 &&
+                    <h1>Bem vindo ao sistema!</h1>
+                 }
+                 <div>
+                     <h2>Curso ReactJs</h2>
+                 </div>
             </div>
         );
     }
